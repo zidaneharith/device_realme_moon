@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "WifiResOverlaymoon",
+    theme: "WifiResOverlay",
+    sdk_version: "current",
+    product_specific: true
+}

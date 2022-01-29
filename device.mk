@@ -109,12 +109,17 @@ PRODUCT_PACKAGES += \
     SecureElement \
     Tag
 
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(DEVICE_PATH)/overlay
-
+# Runtime Resource Overlays 
 PRODUCT_PACKAGES += \
-    NotchBarKiller
+    CarrierConfigOverlaymoon \
+    DialerOverlaymoon \
+    FrameworksResOverlaymoon \
+    SettingsOverlaymoon \
+    SettingsProviderOverlaymoon \
+    SystemUIOverlaymoon \
+    TelephonyOverlaymoon \
+    TetheringResOverlaymoon \
+    WifiResOverlaymoon
 
 # MTK IMS Overlays
 PRODUCT_PACKAGES += \
@@ -129,9 +134,6 @@ PRODUCT_COPY_FILES += \
 # Properties
 -include $(DEVICE_PATH)/system_prop.mk
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
-
-PRODUCT_PACKAGES += \
-    CarrierConfigOverlay
 
 # Recovery
 PRODUCT_PACKAGES += \
@@ -154,5 +156,3 @@ PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 # Wi-Fi
 PRODUCT_PACKAGES += \
     wpa_supplicant.conf \
-    TetheringResOverlay \
-    WifiResOverlay
